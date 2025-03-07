@@ -5,7 +5,13 @@ return {
 		tag = "0.1.6",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+  opts={
+    highlight = { enable = true },
+    incremental_selection = { enable = true},
+    indent = { enable = true , disable = { "python"}}
+  }
+},
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
